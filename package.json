@@ -1,0 +1,14 @@
+{
+  "name": "virtual-conference-app",
+  "version": "1.0.0",
+  "description": "A Virtual Conference application where users can signup, create and schedule and attend virtual conference or meetups",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victor Anene",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
