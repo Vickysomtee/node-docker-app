@@ -1,0 +1,17 @@
+version: "3"
+services: 
+  nginx:
+    ports:
+      - "80:80"
+
+  vc-node-app:
+    build:
+      context: .
+      args:
+        NODE_ENV: production
+    environment:
+      - NODE_ENV=production
+      - MONGO_USER=vickysomtee
+      - MONGO_PASSWORD=victor32
+      - JWT_SECRET=secretkey
+    command: node app.js  

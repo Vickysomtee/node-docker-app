@@ -1,0 +1,31 @@
+version: "3"
+services:
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - "3000:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - vc-node-app  
+
+  vc-node-app:
+    build: .
+    environment:
+      - PORT=3000  
+    depends_on:
+      - mongo  
+
+  mongo:
+    image: mongo:4.4.10
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=vickysomtee
+      - MONGO_INITDB_ROOT_PASSWORD=victor32
+    volumes:
+      - mongo-db:/data/db 
+    ports:
+      - "27018:27017"  
+      
+volumes:
+  mongo-db:      
+          
