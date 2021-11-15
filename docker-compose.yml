@@ -19,9 +19,6 @@ services:
 
   mongo:
     image: mongo:4.4.10
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=vickysomtee
-      - MONGO_INITDB_ROOT_PASSWORD=victor32
     volumes:
       - mongo-db:/data/db 
     ports:

@@ -25,7 +25,7 @@ const {
 } = require("./configs/config");
 
 app.use("/api", (req, res, next) => {
-  res.send("<h2> Hello there!!!! </h2>");
+  res.send("<h2> Hello there!</h2>");
   console.log("Yeah, Its working")
 });
 

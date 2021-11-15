@@ -18,3 +18,8 @@ services:
       - MONGO_PASSWORD=victor32
       - JWT_SECRET=secretkey
     command: npm run dev  
+
+  mongo:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=vickysomtee
+      - MONGO_INITDB_ROOT_PASSWORD=victor32
